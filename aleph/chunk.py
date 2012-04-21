@@ -3,9 +3,14 @@ from utils.bigendian import *
 EntryData = { 
   "LINS": {
     "entryLen": 32,
-    "packString": '>hhhhhhhhhhxxxxxxxxxxxx',
+    "packString": ">hhhhhhhhhhxxxxxxxxxxxx",
     # Not entirely sure what all these do, variable names lifted from Aleph One
-    "varNames": "p1 p2 flags len highAdjFlr lowAdjCei cwPolyIdx ccwPolyIdx cwPolyOwner ccwPolyOwner"
+    "varNames": "p1 p2 flg len hAdjFlr lAdjCei cwPolyIdx ccwPlyIdx cwPlyOwner ccwPlyOwner"
+  },
+  "EPNT" : {
+    "entryLen": 16,
+    "packString": ">hhhhhhhh",
+    "varNames": "flg hAdjFlr lAdjFlr vertx verty transx transy sptPlyIdx"
   }
 }
 class Chunk:
@@ -13,8 +18,9 @@ class Chunk:
         self.tag = file.read(4)
         self.next = readInt(file)
         self.length = readInt(file)
-        # TODO: Not sure what this int is used for in chunks
+        # NOTE: Padding in the file, I believe
         file.seek(4, 1)
+        
         self.entries = []
         
         if self.tag in EntryData:
