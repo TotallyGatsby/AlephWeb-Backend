@@ -1,6 +1,6 @@
 
-  Aleph Web Backend
-  =================
+Aleph Web Backend
+=================
   
   A Python web service to support Aleph Web -- an Open Source 3D action game
 
