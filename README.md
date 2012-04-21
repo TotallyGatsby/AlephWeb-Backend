@@ -32,13 +32,13 @@ File compatibility
 This section gives a summary of the cross-platform compatibility of the
 various data files used by Aleph One and the original Marathon games:
 
-  "Images" - Currently not supported
-  "Shapes" - Currently not supported
-  "Sounds" - Currently not supported
-  Map files - Minimal Support
-  Saved games - Currently not supported
-  Films - Currently not supported
-  Themes - Currently not supported
+* "Images" - Currently not supported
+* "Shapes" - Currently not supported
+* "Sounds" - Currently not supported
+* Map files - Minimal Support
+* Saved games - Currently not supported
+* Films - Currently not supported
+* Themes - Currently not supported
 
 Bug Reports
 -----------
