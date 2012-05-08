@@ -37,4 +37,6 @@ class AlephMap:
     def getJSON(self):
         # TODO: Don't serialize all the data, only
         # serialize what is relevant to the game
+        #jsonpickle.set_preferred_backend('simplejson')
+        #jsonpickle.set_encoder_options('simplejson', sort_keys=False, indent=2)
         return jsonpickle.encode(self, unpicklable=False)

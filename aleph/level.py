@@ -19,10 +19,7 @@ class AlephLevel:
         while not done:            
             chunk = Chunk()
             chunk.read(file)
-            
-            
-                    
-                    
+
             file.seek(chunk.next + self.offset)
             
             if chunk.next == 0:
