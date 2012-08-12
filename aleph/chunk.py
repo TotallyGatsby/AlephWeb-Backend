@@ -19,7 +19,12 @@ EntryData = {
     # secondaryTexture x/y/material transparent texture x/y/material
     # polygonIndex lineIndex
     "varNames" : "type flags px py pmat sx sy smat tx ty tmat polyidx lineidx plite slite tlite"
-  }
+  },
+  "PLAT" : {
+    "entryLen": 140,
+    "packString": ">hIhhhhhhh74xh44x",
+    "varNames" : "type flags speed delay minFloorHeight maxFloorHeight minCeilHeight maxCeilHeight polyidx"
+   }
 }
 
 MaxVertices = 8
